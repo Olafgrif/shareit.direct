@@ -69,5 +69,5 @@ steps:
     azureSubscription: 'Free Trial(3581b12d-bac5-4661-b950-56027e19867e)'
     appType: 'webAppLinux'
     appName: 'shareit-direct'
-    package: '$(System.DefaultWorkingDirectory)'
+    package: '$(System.DefaultWorkingDirectory)/frontend'
     customWebConfig: '-Handler iisnode -NodeStartFile main.js -appType node'
