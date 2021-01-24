@@ -63,4 +63,11 @@ steps:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)/npm'
     artifactName: npm
   displayName: 'Publish npm artifact'
-      
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Free Trial(3581b12d-bac5-4661-b950-56027e19867e)'
+    appType: 'webAppLinux'
+    appName: 'shareit-direct'
+    package: '$(System.DefaultWorkingDirectory)'
+    customWebConfig: '-Handler iisnode -NodeStartFile main.js -appType node'
