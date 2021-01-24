@@ -53,7 +53,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    sourceFolder: 'frontend/$(Build.SourcesDirectory)'
+    sourceFolder: '$(Build.SourcesDirectory)/frontend'
     contents: 'package.json' 
     targetFolder: $(Build.ArtifactStagingDirectory)/npm
   displayName: 'Copy package.json'
